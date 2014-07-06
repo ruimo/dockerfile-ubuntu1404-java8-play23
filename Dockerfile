@@ -7,4 +7,13 @@ RUN cd /tmp && unzip -q typesafe-activator-1.2.3.zip
 RUN mv /tmp/activator-1.2.3 /opt/
 RUN ln -s /opt/activator-1.2.3/activator /usr/local/bin/
 
+# Create dummy project to download artifacts.
+RUN cd /tmp && \
+  activator new test play-scala
+
+RUN cd /tmp/test && \
+  activator compile
+
+RUN rm -rf /tmp/test
+
 EXPOSE 9000
