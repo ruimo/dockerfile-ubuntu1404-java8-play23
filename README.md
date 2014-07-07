@@ -7,10 +7,11 @@ Playframework with activator 1.2.3.
 
 # How to use:
 
-```
-docker run -p 9000:9000 -i -t ruimo/dockerfile-ubuntu1404-java8-pl /bin/bash
+Run launch.sh and your home directory will be mounted at /var/home.
 
-$ root@xxxxx# cd /tmp
+```
+./launsh.sh
+
 $ root@xxxxx# activator new test-appl play-scala
 $ root@xxxxx# cd test-appl
 $ root@xxxxx# activator run
