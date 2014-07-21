@@ -15,7 +15,7 @@ RUN cd /tmp/test && \
   activator compile
 
 RUN rm -rf /tmp/test
-RUN chmod +x /opt/activator-1.2.3/activator
+RUN chmod 777 /opt/activator-1.2.3/activator
 
 EXPOSE 9000
 
